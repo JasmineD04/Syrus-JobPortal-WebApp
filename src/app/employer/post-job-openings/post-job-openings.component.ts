@@ -18,14 +18,14 @@ export class PostJobOpeningsComponent implements OnInit {
       email:new FormControl(),
       organization:new FormControl(),
       designation:new FormControl(),
-      skill1:new FormControl,
-      skill2:new FormControl,
-      skill3:new FormControl,
-      location:new FormControl,
-      salary:new FormControl,
-      language1:new FormControl,
-      language3:new FormControl,
-      description:new FormControl
+      skill1:new FormControl(),
+      skill2:new FormControl(),
+      skill3:new FormControl(),
+      location:new FormControl(),
+      salary:new FormControl(),
+      language1:new FormControl(),
+      language3:new FormControl(),
+      description:new FormControl()
     })
   }
 

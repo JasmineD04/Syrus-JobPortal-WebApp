@@ -18,7 +18,7 @@ public class EmployerService {
     String skill2 = (String) jobData.get("skill2");
     String skill3 = (String) jobData.get("skill3");
     String language1 = (String) jobData.get("language1");
-    String language3 = (String) jobData.get("language2");
+    String language3 = (String) jobData.get("language3");
     String location1 = (String) jobData.get("location1");
     String location2 = (String) jobData.get("location2");
     Integer salary = Integer.parseInt((String)jobData.get("salary"));

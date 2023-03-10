@@ -25,24 +25,48 @@
                         <small class="or text-center">Or</small>
                         <div class="line"></div>
                     </div>
-                    <div class="row px-3">
-                        <label class="mb-1"><h6 class="mb-0 text-sm">Email Address</h6></label>
-                        <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address">
-                    </div>
-                    <div class="row px-3">
-                        <label class="mb-1"><h6 class="mb-0 text-sm">Password</h6></label>
-                        <input type="password" name="password" placeholder="Enter password">
-                    </div>
+                    <form [formGroup]="employerLogin"  (ngSubmit)="submitForm()">
+                        <div class="row px-3">
+                            <label class="mb-1"><h6 class="mb-0 text-sm">Email Address</h6></label>
+                            <input class="mb-4" type="text" formControlName="userName "name="email" placeholder="Enter your username ">
+                        </div>
+                        <div class="row px-3">
+                            <label class="mb-1"><h6 class="mb-0 text-sm">Password</h6></label>
+                            <input type="password" formControlName="password" name="password" placeholder="Enter password">
+                            <div class="row px-3">
+                                <label for="floatingInput" style="font-size: 15px;"> Role:</label>
+                                <div>
+                                  <div>   
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      <input type="radio" formControlName="role" value="employee" name="role" id="flexRadioDefault1">
+                                    Employee
+                                    </label> 
+                                  </div>
+                                  <div>
+                                        
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      <input type="radio"
+                                      formControlName="role" value="employer" name="role" id="flexRadioDefault2">
+                                    Employer
+                                    </label>
+                                   
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row mb-3 px-3">
+                                <button (click)="submitForm()" type="submit" class="btn btn-blue text-center">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                    
                     <div class="row px-3 mb-4">
                         <div class="custom-control custom-checkbox custom-control-inline">
-                            <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> 
+                            <!-- <input id="chk1" type="checkbox" name="chk" class="custom-control-input">  -->
                             <label for="chk1" class="custom-control-label text-sm">Remember me</label>
                         </div>
                         <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
                     </div>
-                    <div class="row mb-3 px-3">
-                        <button type="submit" class="btn btn-blue text-center">Login</button>
-                    </div>
+                   
                     <div class="row mb-4 px-3">
                         <small class="font-weight-bold">Don't have an account? <a class="text-danger ">Register</a></small>
                     </div>

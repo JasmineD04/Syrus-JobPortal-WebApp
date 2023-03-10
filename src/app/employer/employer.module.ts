@@ -20,6 +20,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule,
     ReactiveFormsModule,
     NgbModule
+  ],
+  exports:[
+    EmployerDashboardComponent,
+    TrackApplicationComponent
   ]
 })
 export class EmployerModule { }
