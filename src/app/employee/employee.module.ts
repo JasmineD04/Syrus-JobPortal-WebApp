@@ -25,7 +25,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   exports:[
     JobOpeningsComponent,
-    QueryComponent
+    QueryComponent,
+    EmployeeDashboardComponent
   ]
 })
 export class EmployeeModule { }

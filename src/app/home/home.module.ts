@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MediumComponent } from './medium/medium.component';
+import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -25,7 +27,10 @@ import { MediumComponent } from './medium/medium.component';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    SharedModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports:[
     AboutComponent

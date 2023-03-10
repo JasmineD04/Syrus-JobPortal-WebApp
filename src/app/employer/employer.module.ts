@@ -22,6 +22,10 @@ import { ShowAllPostComponent } from './show-all-post/show-all-post.component';
     RouterModule,
     ReactiveFormsModule,
     NgbModule
+  ],
+  exports:[
+    EmployerDashboardComponent,
+    TrackApplicationComponent
   ]
 })
 export class EmployerModule { }
