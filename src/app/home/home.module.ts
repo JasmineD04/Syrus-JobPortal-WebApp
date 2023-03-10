@@ -5,6 +5,10 @@ import { EmployerLoginComponent } from './employer-login/employer-login.componen
 import { EmployeeSignUpComponent } from './employee-sign-up/employee-sign-up.component';
 import { EmployerSignUpComponent } from './employer-sign-up/employer-sign-up.component';
 import { AboutComponent } from './about/about.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MediumComponent } from './medium/medium.component';
 
 
 
@@ -14,10 +18,17 @@ import { AboutComponent } from './about/about.component';
     EmployerLoginComponent,
     EmployeeSignUpComponent,
     EmployerSignUpComponent,
-    AboutComponent
+    AboutComponent,
+    MediumComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    NgbModule
+  ],
+  exports:[
+    AboutComponent
   ]
 })
 export class HomeModule { }

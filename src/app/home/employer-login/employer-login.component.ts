@@ -11,5 +11,6 @@ export class EmployerLoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  active = 1;
 
 }

@@ -1,0 +1,17 @@
+<section style="padding-top: 100px;">
+
+
+<ul ngbNav #nav="ngbNav" class="nav nav-pills green mb-3 text-success " style="padding-left: 40%;" id="pills-tab" role="tablist" >
+    <li ngbNavItem class="nav-item  text-success" role="presentation">
+      <a ngbNavLink>EMPLOYER LOGIN</a>
+      <ng-template ngbNavContent class="nav-link text-uppercase w-100  text-success" class="tab-pane fade" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+    <app-employer-login></app-employer-login>
+    </ng-template>
+    </li>
+    <li ngbNavItem class="nav-item  text-success" role="presentation">
+      <a ngbNavLink>EMPOLYEE LOGIN</a>
+      <ng-template ngbNavContent class="nav-link text-uppercase w-100 active" class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae voluptate animi porro commodi quibusdam culpa excepturi iusto dolores labore eius nemo corrupti minima necessitatibus qui sequi rerum incidunt, delectus pariatur doloremque voluptatum. Doloremque voluptates vero eum fugiat non inventore itaque.</ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
+</section>

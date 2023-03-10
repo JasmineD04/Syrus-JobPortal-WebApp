@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-post-job-openings',
   templateUrl: './post-job-openings.component.html',
@@ -11,5 +10,12 @@ export class PostJobOpeningsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  basic=false
+  onclick(){
+    this.basic=true
+  }
+  
+
 
 }
