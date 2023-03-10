@@ -38,13 +38,17 @@ export class EmployerLoginComponent implements OnInit {
     console.log("In authentication");
     this.homeService.employerLogin(body).subscribe((value:any)=>{
       this.valid=value.valid
-      if(this.valid==0){
-
+      if(this.valid==1){
+          this.router.navigate(["/employeeDashboard"])
+       }
+       else if(this.valid==3){
+        this.router.navigate(["/employerDashboard"])
        }
        else{
+        alert("invalid credentials");
+       }
 
        }
-      }
     )
   }
 
