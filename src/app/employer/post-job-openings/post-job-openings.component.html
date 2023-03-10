@@ -1,6 +1,7 @@
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
 <section style="padding-top: 100px;">
 
 
@@ -10,58 +11,78 @@
             <img src="assets/images/img-01.png" alt="IMG">
         </div>
 
-        <form class="contact1-form validate-form">
+        <form class="contact1-form validate-form" [formGroup]="JobForm">
             <span class="contact1-form-title">
                 Job Posting
             </span>
 
-            <div class="wrap-input1 validate-input" data-validate = "Name is required">
-                <input class="input1" type="text" name="name" placeholder="Name">
+            <div class="wrap-input1 validate-input" >
+                <input class="input1" type="text" name="name" placeholder="Name" formControlName="name">
                 <span class="shadow-input1"></span>
             </div>
 
-            <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                <input class="input1" type="text" name="email" placeholder="Email">
+            <div class="wrap-input1 validate-input">
+                <input class="input1" type="text" name="email" placeholder="Email" formControlName="email">
                 <span class="shadow-input1"></span>
             </div>
 
-            <div class="wrap-input1 validate-input" data-validate = "Organization name required">
-                <input class="input1" type="text" name="organization name" placeholder="organization name">
+            <div class="wrap-input1 validate-input" >
+                <input class="input1" type="text" name="organization name" placeholder="organization name" formControlName="organization">
                 <span class="shadow-input1"></span>
             </div>
             
-            <div class="wrap-input1 validate-input" data-validate = "Designation required">
-                <input class="input1" type="text" name="designation" placeholder="designation name">
+            <div class="wrap-input1 validate-input" >
+                <input class="input1" type="text" name="designation" placeholder="designation name" formControlName="designation">
                 <span class="shadow-input1"></span>
             </div>
             
           
             <div class="wrap-input1 validate-input">
                 
-                <input class="input1" type="text" name="skill1" placeholder="skills">
-                <span>
-                    <!-- <button (click)="onclick()"><i class="fa fa-user text-muted"></i></button> -->
-                </span>
+                <input class="input1" type="text" name="skill1" placeholder="skills" formControlName="skill1">
+               
+                    <button type="button" (click)="onclick()"><i class="fa fa-plus-circle text-muted"></i></button>
+                
+                
                 <span class="shadow-input1"></span>
             </div>
-            <!-- <div class="wrap-input1 validate-input" *ngIf="basic">
-                <input class="input1" type="text" name="skill2" placeholder="skill2">
-                <span class="shadow-input1"></span>
-            </div> -->
-            <div class="wrap-input1 validate-input" data-validate = "Designation required">
-                <input class="input1" type="text" name="designation" placeholder="location">
-                <span class="shadow-input1"></span>
-            </div>
-            <div class="wrap-input1 validate-input" data-validate = "Designation required">
-                <input class="input1" type="text" name="designation" placeholder="salary">
+           
+            <div class="wrap-input1 validate-input" >
+                <input class="input1" type="text" name="skill2" placeholder="skill2" *ngIf="this.basic==true"formControlName="skill2" >
+                <button type="button" (click)="upclick()" *ngIf="this.basic==true"><i class="fa fa-plus-circle text-muted"></i></button>
                 <span class="shadow-input1"></span>
             </div>
 
+            <div class="wrap-input1 validate-input" >
+                <input class="input1" type="text" name="skill3" placeholder="skill3" *ngIf="this.basic==true" formControlName="skill3">
+                <span class="shadow-input1"></span>
+            </div>
+       
+            <div class="wrap-input1 validate-input" data-validate = "location required">
+                <input class="input1" type="text" name="location" placeholder="location" formControlName="location">
+                <span class="shadow-input1"></span>
+            </div>
 
 
+            <div class="wrap-input1 validate-input" >
+                <input class="input1" type="text" name="designation" placeholder="salary" formControlName="salary">
+                <span class="shadow-input1"></span>
+            </div>
 
-            <div class="wrap-input1 validate-input" data-validate = "Message is required">
-                <textarea class="input1" name="message" placeholder="description"></textarea>
+            <div class="wrap-input1 validate-input" >
+                <input class="input1" type="text" name="language1" placeholder="language" formControlName="language1">
+                <button type="button" (click)="upclick()"><i class="fa fa-plus-circle text-muted"></i></button>
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" >
+                <input class="input1" type="text" name="language3" placeholder="language" *ngIf="this.basic==true" formControlName="language3">
+                <span class="shadow-input1"></span>
+            </div>
+    
+
+            <div class="wrap-input1 validate-input">
+                <textarea class="input1" name="description" placeholder="description" formControlName="description"></textarea>
                 <span class="shadow-input1"></span>
             </div>
 

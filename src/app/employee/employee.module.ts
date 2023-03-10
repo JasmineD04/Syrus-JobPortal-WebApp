@@ -4,6 +4,9 @@ import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashbo
 import { PreferencesComponent } from './preferences/preferences.component';
 import { JobOpeningsComponent } from './job-openings/job-openings.component';
 import { QueryComponent } from './query/query.component';
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -15,7 +18,13 @@ import { QueryComponent } from './query/query.component';
     QueryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    NgbModule
+  ],
+  exports:[
+    JobOpeningsComponent
   ]
 })
 export class EmployeeModule { }
