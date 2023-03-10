@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { JobOpeningsComponent } from './employee/job-openings/job-openings.component';
+import { QueryComponent } from './employee/query/query.component';
 import { PostJobOpeningsComponent } from './employer/post-job-openings/post-job-openings.component';
 import { AboutComponent } from './home/about/about.component';
 import { EmployeeLoginComponent } from './home/employee-login/employee-login.component';
@@ -12,7 +14,10 @@ const routes: Routes = [
    {path:'signup',component:EmployerLoginComponent},
    {path:'register',component:EmployerSignUpComponent},
    {path:'job',component:PostJobOpeningsComponent},
-   {path:'home',component:AboutComponent}
+   {path:'home',component:AboutComponent},
+   {path:'query',component:QueryComponent},
+
+   {path:'opening',component:JobOpeningsComponent}
 ];
 
 @NgModule({
