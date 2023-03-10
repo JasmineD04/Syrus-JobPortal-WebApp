@@ -14,4 +14,8 @@ public class EmployerRepository {
   public void addJob(String organizationName,String designation,String skill1,String skill2,String skill3,String language1,String language3,String location1,String location2,Integer salary,String period){
     this.jdbcTemplate.update("EXEC employer.sp_addJob ?,?,?,?,?,?,?,?,?,?,?",organizationName,designation,skill1,skill2,skill3,language1,language3,location1,location2,salary,period);
   }
+
+  public Map<String,Object> loginUser(String userName,String password,String role){
+    return this.jdbcTemplate.queryForMap("EXEC dbo.sp_loginUser  ?,?,?",userName,password,role);
+  }
 }

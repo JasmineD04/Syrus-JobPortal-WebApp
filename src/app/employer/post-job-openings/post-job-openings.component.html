@@ -36,30 +36,20 @@
             <div class="wrap-input1 validate-input" >
                 <input class="input1" type="text" name="designation" placeholder="designation name" formControlName="designation">
                 <span class="shadow-input1"></span>
-            </div>
-            
           
-            <div class="wrap-input1 validate-input">
-                
-                <input class="input1" type="text" name="skill1" placeholder="skills" formControlName="skill1">
-               
-                    <button type="button" (click)="onclick()"><i class="fa fa-plus-circle text-muted"></i></button>
-                
-                
-                <span class="shadow-input1"></span>
-            </div>
-           
-            <div class="wrap-input1 validate-input" >
-                <input class="input1" type="text" name="skill2" placeholder="skill2" *ngIf="this.basic==true"formControlName="skill2" >
-                <button type="button" (click)="upclick()" *ngIf="this.basic==true"><i class="fa fa-plus-circle text-muted"></i></button>
-                <span class="shadow-input1"></span>
-            </div>
-
-            <div class="wrap-input1 validate-input" >
-                <input class="input1" type="text" name="skill3" placeholder="skill3" *ngIf="this.basic==true" formControlName="skill3">
-                <span class="shadow-input1"></span>
-            </div>
-       
+                <div class="">
+                    <!-- <div class="col"> -->
+                        <div ngbDropdown>
+                            <button type="button" class="" id="dropdownBasic1" ngbDropdownToggle>
+                                SKILLS:
+                            </button>
+                            <div ngbDropdownMenu>
+                                <!-- <button type="button" *ngFor="let category of categories" ngbDropdownItem  (click)="selectSkill(skill)">{{category.categoryName }}</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
             <div class="wrap-input1 validate-input" data-validate = "location required">
                 <input class="input1" type="text" name="location" placeholder="location" formControlName="location">
                 <span class="shadow-input1"></span>
@@ -73,8 +63,6 @@
 
             <div class="wrap-input1 validate-input" >
                 <input class="input1" type="text" name="language1" placeholder="language" formControlName="language1">
-                <button type="button" (click)="upclick()"><i class="fa fa-plus-circle text-muted"></i></button>
-                <span class="shadow-input1"></span>
             </div>
 
             <div class="wrap-input1 validate-input" >

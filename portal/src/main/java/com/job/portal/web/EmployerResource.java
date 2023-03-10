@@ -15,4 +15,9 @@ public class EmployerResource {
   public void addJob(@RequestBody Map<String,Object> jobData){
     employerService.addJob(jobData);
   }
+
+  @PostMapping("/loginUser")
+  public Map<String,Object> loginUser(@RequestBody Map<String,Object> userData){
+    return employerService.loginUser(userData);
+  }
 }
