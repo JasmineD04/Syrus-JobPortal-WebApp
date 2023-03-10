@@ -6,6 +6,7 @@ import { TrackApplicationComponent } from './track-application/track-application
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ShowAllPostComponent } from './show-all-post/show-all-post.component';
 
 
 
@@ -13,7 +14,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     EmployerDashboardComponent,
     PostJobOpeningsComponent,
-    TrackApplicationComponent
+    TrackApplicationComponent,
+    ShowAllPostComponent
   ],
   imports: [
     CommonModule,
