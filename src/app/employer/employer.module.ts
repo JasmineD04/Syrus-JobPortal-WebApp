@@ -5,8 +5,9 @@ import { PostJobOpeningsComponent } from './post-job-openings/post-job-openings.
 import { TrackApplicationComponent } from './track-application/track-application.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShowAllPostComponent } from './show-all-post/show-all-post.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -21,7 +22,8 @@ import { ShowAllPostComponent } from './show-all-post/show-all-post.component';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    NgbTypeaheadModule
   ],
   exports:[
     EmployerDashboardComponent,
