@@ -16,8 +16,8 @@ import { EmployerSignUpComponent } from './home/employer-sign-up/employer-sign-u
 
 const routes: Routes = [
   // {path:'signin',component:EmployeeLoginComponent},
-   {path:'signup',component:EmployerLoginComponent},
-   {path:'register',component:EmployeeSignUpComponent},
+   {path:'login',component:EmployerLoginComponent},
+   {path:'register',component:EmployerSignUpComponent},
    {path:'job',component:PostJobOpeningsComponent},
    {path:'home',component:AboutComponent},
    {path:'query',component:QueryComponent},

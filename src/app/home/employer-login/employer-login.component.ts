@@ -38,6 +38,7 @@ export class EmployerLoginComponent implements OnInit {
     console.log("In authentication");
     this.homeService.employerLogin(body).subscribe((value:any)=>{
       this.valid=value.valid
+      console.log(this.valid)
       if(this.valid==1){
           this.router.navigate(["/employeeDashboard"])
        }

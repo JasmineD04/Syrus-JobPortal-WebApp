@@ -9,6 +9,7 @@ import java.util.Map;
 @Service
 public class EmployerService {
 
+  @Autowired
   private EmployerRepository employerRepository;
 
   public void addJob(Map<String,Object> jobData){
@@ -25,6 +26,16 @@ public class EmployerService {
     String period = (String) jobData.get("period");
     employerRepository.addJob(organizationName,designation,skill1,skill2,skill3,language1,language3,location1,location2,salary,period);
 
+
+  }
+
+
+  public Map<String,Object> loginUser(Map<String,Object> userData){
+
+    String userName =(String) userData.get("userName");
+    String password =(String) userData.get("password");
+    String role =(String) userData.get("role");
+    return employerRepository.loginUser(userName,password,role);
 
   }
 }
