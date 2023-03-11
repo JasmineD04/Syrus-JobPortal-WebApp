@@ -9,6 +9,7 @@ import { ShowAllPostComponent } from './employer/show-all-post/show-all-post.com
 import { TrackApplicationComponent } from './employer/track-application/track-application.component';
 import { AboutComponent } from './home/about/about.component';
 import { EmployeeLoginComponent } from './home/employee-login/employee-login.component';
+import { EmployeeSignUpComponent } from './home/employee-sign-up/employee-sign-up.component';
 import { EmployerLoginComponent } from './home/employer-login/employer-login.component';
 import { EmployerSignUpComponent } from './home/employer-sign-up/employer-sign-up.component';
 
@@ -16,13 +17,14 @@ import { EmployerSignUpComponent } from './home/employer-sign-up/employer-sign-u
 const routes: Routes = [
   // {path:'signin',component:EmployeeLoginComponent},
    {path:'signup',component:EmployerLoginComponent},
-   {path:'register',component:EmployerSignUpComponent},
+   {path:'register',component:EmployeeSignUpComponent},
    {path:'job',component:PostJobOpeningsComponent},
    {path:'home',component:AboutComponent},
    {path:'query',component:QueryComponent},
    {path:'track',component:TrackApplicationComponent},
    {path:'showpost',component:ShowAllPostComponent},
    {path:'opening',component:JobOpeningsComponent},
+   {path:'jobOpening',component:PostJobOpeningsComponent},
   {path:'employeeDashboard',component:EmployeeDashboardComponent},
   {path:'employerDashboard',component:EmployerDashboardComponent}
 ];
